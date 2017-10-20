@@ -1,3 +1,16 @@
+/** common */
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/** header */
+header {
+  z-index: 1200;
+  position: relative;
+}
+/** header-logo */
 .tpl-header-logo {
   width: 240px;
   height: 57px;
@@ -13,6 +26,7 @@
 .tpl-header-logo img {
   width: 170px;
 }
+/** right content */
 .tpl-header-fluid {
   margin-left: 240px;
   height: 56px;
@@ -20,21 +34,199 @@
   padding-right: 20px;
 }
 .tpl-header-switch-button {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0 0 0 -20px;
   float: left;
   color: #cfcfcf;
-  margin-left: -20px;
-  margin-right: 0;
   border: 0;
   border-radius: 0;
-  padding: 0px 22px;
+  padding: 0 22px;
   font-size: 22px;
   line-height: 55px;
 }
 .tpl-header-switch-button:hover {
   outline: none;
 }
+
+.tpl-header-navbar {
+  color: #fff;
+}
+.tpl-header-navbar li {
+  float: left;
+}
+.tpl-header-navbar a {
+  line-height: 56px;
+  display: block;
+  padding: 0 16px;
+  position: relative;
+}
+.tpl-header-navbar a .item-feed-badge {
+  position: absolute;
+  top: 9px;
+  left: 25px;
+}
+ul.tpl-dropdown-content {
+  margin-top: 0;
+  width: auto;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 0.3em;
+}
+ul.tpl-dropdown-content li {
+  float: none;
+}
+ul.tpl-dropdown-content:before,
+ul.tpl-dropdown-content:after {
+  display: none;
+}
+ul.tpl-dropdown-content .tpl-dropdown-menu-system-title {
+  font-size: 16px;
+  float: left;
+  color: rgba(51, 51, 51, 1);
+}
+ul.tpl-dropdown-content .tpl-dropdown-menu-system-item {
+  padding: 6px;
+  color: #333;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.15);
+}
+ul.tpl-dropdown-content .tpl-dropdown-menu-system-item:hover,
+ul.tpl-dropdown-content .tpl-dropdown-menu-system-item:focus {
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+.left-sidebar {
+  transition: all 0.4s ease-in-out;
+  width: 240px;
+  min-height: 100%;
+  padding-top: 57px;
+  position: absolute;
+  z-index: 1104;
+  top: 0;
+  left: 0px;
+  background: #fff;
+}
+.left-sidebar.xs-active {
+  left: 0px;
+}
+.left-sidebar.active {
+  left: -240px;
+}
+
+.tpl-sidebar-user-panel {
+  padding: 22px;
+  padding-top: 28px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.tpl-user-panel-profile-picture {
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.tpl-user-panel-profile-picture img {
+  width: auto;
+  height: 82px;
+  vertical-align: middle;
+}
+.user-panel-logged-in-text {
+  display: block;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+.tpl-user-panel-status-icon {
+  margin-right: 2px;
+}
+.tpl-user-panel-action-link {
+  color: #6d787c;
+  font-size: 12px;
+}
+.tpl-user-panel-action-link:hover {
+  color: #a2aaad;
+}
+.sidebar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav-sub {
+  display: none;
+}
+.sidebar-nav-sub .sidebar-nav-link {
+  font-size: 12px;
+  padding-left: 30px;
+}
+.sidebar-nav-sub .sidebar-nav-link a {
+  font-size: 12px;
+  padding-left: 0;
+}
+.sidebar-nav-sub .sidebar-nav-link-logo {
+  margin-right: 8px;
+  margin-left: 10px;
+  width: 20px;
+  font-size: 16px;
+}
+
+.sidebar-nav-heading {
+  padding: 24px 17px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #999;
+  border-bottom: 1px solid #eee;
+}
+.sidebar-nav-heading-info {
+  font-size: 12px;
+  color: #868E8E;
+  padding-left: 10px;
+}
+.sidebar-nav-link {
+  color: #fff;
+}
+.sidebar-nav-link a {
+  display: block;
+  color: #868E8E;
+  padding: 10px 17px;
+  font-size: 14px;
+  cursor: pointer;
+  border-left: #fff 3px solid;
+}
+.sidebar-nav-link a.active {
+  background: #f2f6f9;
+  color: #868E8E;
+  border-left: #3bb4f2 3px solid;
+}
+.sidebar-nav-link a:hover {
+  background: #f2f6f9;
+  color: #868E8E;
+  border-left: #3bb4f2 3px solid;
+}
+.sidebar-nav-link-logo {
+  margin-right: 8px;
+  width: 20px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1024px) {
   .tpl-header-logo {
     float: none;
@@ -43,5 +235,14 @@
   .tpl-header-fluid {
     border-top: none;
     margin-left: 0;
+  }
+  .tpl-header-navbar-welcome {
+    display: none;
+  }
+  .left-sidebar {
+    padding-top: 111px;
+  }
+  .tpl-sidebar-user-panel {
+    border-top: 1px solid #eee;
   }
 }
