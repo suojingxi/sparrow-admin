@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MiddleComponent } from './middle/middle.component';
 import { MiddleLeftNavComponent } from './middle-left-nav/middle-left-nav.component';
 import { MiddleRightContentComponent } from './middle-right-content/middle-right-content.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MiddleRightContentComponent } from './middle-right-content/middle-right
     FooterComponent,
     MiddleComponent,
     MiddleLeftNavComponent,
-    MiddleRightContentComponent
+    MiddleRightContentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule
