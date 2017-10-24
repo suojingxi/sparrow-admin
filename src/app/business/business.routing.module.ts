@@ -1,7 +1,7 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {AuthGuardService} from "../common/service/auth/anth.guard.service";
-import {HeaderComponent} from "../public/header/header.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AuthGuardService} from '../common/service/auth/anth.guard.service';
+import {HeaderComponent} from '../public/header/header.component';
 
 const routes: Routes = [
   {
@@ -24,4 +24,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class BusinessRoutingModule{}
+export class BusinessRoutingModule {}

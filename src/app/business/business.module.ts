@@ -1,8 +1,8 @@
-import {NgModule} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import {BusinessRoutingModule} from "./business.routing.module";
+import {BusinessRoutingModule} from './business.routing.module';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,62 @@
+.tpl-login {
+  width: 100%;
+}
+.tpl-login-logo {
+  max-width: 159px;
+  height: 205px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: url(../../../assets/images/logoa.png) center no-repeat;
+}
+.tpl-login-title {
+  width: 100%;
+  font-size: 24px;
+  color: #697882;
+}
+.tpl-login-title strong {
+  color: #39bae4;
+}
+.tpl-login-content {
+  margin: 4% auto 0;
+  width: 500px;
+  padding: 40px 40px 25px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.tpl-login-remember-me {
+  color: #B3B3B3;
+  font-size: 14px;
+}
+.tpl-login-remember-me label {
+  position: relative;
+  top: -2px;
+}
+.tpl-login-content-info {
+  color: #B3B3B3;
+  font-size: 14px;
+}
+.tpl-login-btn {
+  background-color: #32c5d2;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 14px;
+  outline: none;
+}
+.tpl-login-btn:hover,
+.tpl-login-btn:active {
+  background: #22b2e1;
+  color: #fff;
+}
+
+
+
+@media screen and (max-width: 641px) {
+  .tpl-login-title {
+    font-size: 20px;
+  }
+  .tpl-login-content {
+    width: 86%;
+    padding: 22px 30px 25px;
+  }
+}

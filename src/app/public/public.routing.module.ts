@@ -1,6 +1,6 @@
-import {Routes, RouterModule} from "@angular/router";
-import {LoginComponent} from "./login/login.component";
-import {NgModule} from "@angular/core";
+import {Routes, RouterModule} from '@angular/router';
+import {LoginComponent} from './login/login.component';
+import {NgModule} from '@angular/core';
 const routes: Routes = [
   {
     path: 'login',
@@ -16,4 +16,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class PublicRoutingModule{}
+export class PublicRoutingModule {}
