@@ -1,26 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
+
+import {AppRoutingModule} from "./app.routing.module";
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MiddleComponent } from './middle/middle.component';
-import { MiddleLeftNavComponent } from './middle-left-nav/middle-left-nav.component';
-import { MiddleRightContentComponent } from './middle-right-content/middle-right-content.component';
-import { LoginComponent } from './login/login.component';
+import {BusinessModule} from "./business/business.module";
+import {PublicModule} from "./public/public.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    MiddleComponent,
-    MiddleLeftNavComponent,
-    MiddleRightContentComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule,
+    PublicModule,
+    BusinessModule
   ],
   providers: [],
   bootstrap: [AppComponent]
