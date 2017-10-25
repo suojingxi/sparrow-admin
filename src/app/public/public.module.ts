@@ -6,13 +6,17 @@ import {AuthGuardService} from '../common/service/auth/anth.guard.service';
 import {PublicRoutingModule} from './public.routing.module';
 import {LoginComponent} from './login/login.component';
 import {FooterComponent} from './footer/footer.component';
-import {MiddleComponent} from './middle/middle.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { FrameComponent } from './frame/frame.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    MiddleComponent
+    NavigationComponent,
+    DashboardComponent,
+    FrameComponent
   ],
   imports: [
     CommonModule,

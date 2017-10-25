@@ -3,8 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   /*
-   path：字符串，表示默认登入,
-   path为路径 /login component:组件
+   path：字符串，路径 不要在路径前加/
    component：组件
    pathMatch：为字符串默认为前缀匹配 "prefix"; "full" 为完全匹配。
    redirectTo：指向为路径，既path
@@ -13,6 +12,11 @@ const routes: Routes = [
    */
   {
     path: '',
+    redirectTo: 'business',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
     redirectTo: 'business',
     pathMatch: 'full'
   }
