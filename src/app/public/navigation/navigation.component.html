@@ -17,70 +17,95 @@
   <!-- 菜单 -->
   <ul class="sidebar-nav">
     <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 系统设置</span></li>
+    <!-- 仪表盘 -->
     <li class="sidebar-nav-link">
-      <a class="active" routerLink="/business/dashboard" routerLinkActive="active">
+      <a routerLink="/business/dashboard" routerLinkActive="active">
         <i class="am-icon-dashboard sidebar-nav-link-logo"></i> 仪表盘
       </a>
     </li>
-    <li class="sidebar-nav-link">
-      <a href="tables.html">
-        <i class="am-icon-table sidebar-nav-link-logo"></i> 表格
-      </a>
-    </li>
-    <li class="sidebar-nav-link">
-      <a href="calendar.html">
-        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日历
-      </a>
-    </li>
-    <li class="sidebar-nav-link">
-      <a href="form.html">
-        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单
 
-      </a>
-    </li>
+    <!-- 系统组织管理 -->
     <li class="sidebar-nav-link">
-      <a href="chart.html">
-        <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
-
+      <a href="javascript:;" (click)="openSystemOrgList()">
+        <i class="am-icon-table sidebar-nav-link-logo"></i> 系统组织管理
+        <span [ngClass]="{'am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico': true, 'sidebar-nav-sub-ico-rotate': systemOrgFlag}"></span>
       </a>
-    </li>
-
-    <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li>
-    <li class="sidebar-nav-link">
-      <a href="javascript:;" class="sidebar-nav-sub-title">
-        <i class="am-icon-table sidebar-nav-link-logo"></i> 数据列表
-        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-      </a>
-      <ul class="sidebar-nav sidebar-nav-sub">
+      <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': systemOrgFlag, 'am-hide': !systemOrgFlag, 'am-show': systemOrgFlag}">
         <li class="sidebar-nav-link">
-          <a href="table-list.html">
-            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 文字列表
+          <a href="table-list.html" class="sub-active">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 系统管理
           </a>
         </li>
 
         <li class="sidebar-nav-link">
           <a href="table-list-img.html">
-            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 图文列表
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 组织管理
           </a>
         </li>
       </ul>
     </li>
+
+    <!-- 用户角色管理 -->
     <li class="sidebar-nav-link">
-      <a href="sign-up.html">
-        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册
-        <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>
+      <a href="javascript:;" (click)="openUserRoleList()">
+        <i class="am-icon-table sidebar-nav-link-logo"></i> 用户角色管理
+        <span [ngClass]="{'am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico': true, 'sidebar-nav-sub-ico-rotate': userRoleFlag}"></span>
       </a>
-    </li>
-    <li class="sidebar-nav-link">
-      <a href="login.html">
-        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
-      </a>
-    </li>
-    <li class="sidebar-nav-link">
-      <a href="404.html">
-        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误
-      </a>
+      <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': userRoleFlag, 'am-hide': !userRoleFlag, 'am-show': userRoleFlag}">
+        <li class="sidebar-nav-link">
+          <a href="table-list.html" class="sub-active">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用户管理
+          </a>
+        </li>
+
+        <li class="sidebar-nav-link">
+          <a href="table-list-img.html">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 角色管理
+          </a>
+        </li>
+      </ul>
     </li>
 
+    <!-- 资源权限管理 -->
+    <li class="sidebar-nav-link">
+      <a href="javascript:;" (click)="openResPemisList()">
+        <i class="am-icon-table sidebar-nav-link-logo"></i> 资源权限管理
+        <span [ngClass]="{'am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico': true, 'sidebar-nav-sub-ico-rotate': resPemisFlag}"></span>
+      </a>
+      <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': resPemisFlag, 'am-hide': !resPemisFlag, 'am-show': resPemisFlag}">
+        <li class="sidebar-nav-link">
+          <a href="table-list.html" class="sub-active">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 资源管理
+          </a>
+        </li>
+
+        <li class="sidebar-nav-link">
+          <a href="table-list-img.html">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 权限管理
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- 权限分配管理 -->
+    <li class="sidebar-nav-link">
+      <a href="javascript:;" (click)="openPemisDistrList()">
+        <i class="am-icon-table sidebar-nav-link-logo"></i> 权限分配管理
+        <span [ngClass]="{'am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico': true, 'sidebar-nav-sub-ico-rotate': pemisDistrFlag}"></span>
+      </a>
+      <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': pemisDistrFlag, 'am-hide': !pemisDistrFlag, 'am-show': pemisDistrFlag}">
+        <li class="sidebar-nav-link">
+          <a href="table-list.html" class="sub-active">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 角色权限分配管理
+          </a>
+        </li>
+
+        <li class="sidebar-nav-link">
+          <a href="table-list-img.html">
+            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用户权限分配管理
+          </a>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>
