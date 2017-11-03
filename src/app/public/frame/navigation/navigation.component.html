@@ -19,7 +19,7 @@
     <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 系统设置</span></li>
     <!-- 仪表盘 -->
     <li class="sidebar-nav-link">
-      <a routerLink="/business/dashboard" routerLinkActive="active">
+      <a routerLink="/dashboard" routerLinkActive="active">
         <i class="am-icon-dashboard sidebar-nav-link-logo"></i> 仪表盘
       </a>
     </li>
@@ -32,7 +32,7 @@
       </a>
       <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': systemOrgFlag, 'am-hide': !systemOrgFlag, 'am-show': systemOrgFlag}">
         <li class="sidebar-nav-link">
-          <a href="table-list.html" class="sub-active">
+          <a routerLink="/system" routerLinkActive="active">
             <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 系统管理
           </a>
         </li>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SubTitles} from "./nav-list/nav-list.component";
 
 @Component({
   selector: 'app-navigation',
@@ -11,7 +12,8 @@ export class NavigationComponent implements OnInit {
   userRoleFlag = false;
   resPemisFlag = false;
   pemisDistrFlag = false;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

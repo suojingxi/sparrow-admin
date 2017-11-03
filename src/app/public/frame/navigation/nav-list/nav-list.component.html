@@ -1,0 +1,13 @@
+<li class="sidebar-nav-link">
+  <a href="javascript:;" (click)="openList()">
+    <i class="am-icon-table sidebar-nav-link-logo"></i> {{ listTitle }}
+    <span [ngClass]="{'am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico': true, 'sidebar-nav-sub-ico-rotate': classFlag}"></span>
+  </a>
+  <ul [ngClass]="{'sidebar-nav': true, 'sidebar-nav-sub': classFlag, 'am-hide': !classFlag, 'am-show': classFlag}">
+    <li class="sidebar-nav-link" *ngFor="let subTitle of subTitles">
+      <a class="sub-active">
+        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> {{ subTitle.title }}
+      </a>
+    </li>
+  </ul>
+</li>

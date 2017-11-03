@@ -12,13 +12,11 @@ const routes: Routes = [
    */
   {
     path: '',
-    redirectTo: 'business',
-    pathMatch: 'full'
+    loadChildren: 'app/public/frame/frame.module#FrameModule'
   },
   {
     path: '**',
-    redirectTo: 'business',
-    pathMatch: 'full'
+    loadChildren: 'app/public/frame/frame.module#FrameModule'
   }
 ];
 

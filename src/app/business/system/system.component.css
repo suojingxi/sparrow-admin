@@ -1,0 +1,273 @@
+.widget {
+  width: 100%;
+  min-height: 148px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px 20px 13px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #838FA1;
+}
+.widget-head {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #eef1f5;
+}
+.widget-title {
+  font-size: 14px;
+  font-size: 16px;
+}
+.widget-body {
+  padding: 13px 15px;
+  width: 100%;
+}
+.tpl-table-list-select {
+  text-align: right;
+}
+.tpl-form-border-form {
+  padding-top: 20px;
+}
+.cl-p {
+  padding: 0!important;
+}
+.tpl-form-line-form,
+.tpl-form-border-form {
+  padding-top: 20px;
+}
+.tpl-form-border-form input[type=number]:focus,
+.tpl-form-border-form input[type=search]:focus,
+.tpl-form-border-form input[type=text]:focus,
+.tpl-form-border-form input[type=password]:focus,
+.tpl-form-border-form input[type=datetime]:focus,
+.tpl-form-border-form input[type=datetime-local]:focus,
+.tpl-form-border-form input[type=date]:focus,
+.tpl-form-border-form input[type=month]:focus,
+.tpl-form-border-form input[type=time]:focus,
+.tpl-form-border-form input[type=week]:focus,
+.tpl-form-border-form input[type=email]:focus,
+.tpl-form-border-form input[type=url]:focus,
+.tpl-form-border-form input[type=tel]:focus,
+.tpl-form-border-form input[type=color]:focus,
+.tpl-form-border-form select:focus,
+.tpl-form-border-form textarea:focus,
+.am-form-field:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.tpl-form-border-form input[type=number],
+.tpl-form-border-form input[type=search],
+.tpl-form-border-form input[type=text],
+.tpl-form-border-form input[type=password],
+.tpl-form-border-form input[type=datetime],
+.tpl-form-border-form input[type=datetime-local],
+.tpl-form-border-form input[type=date],
+.tpl-form-border-form input[type=month],
+.tpl-form-border-form input[type=time],
+.tpl-form-border-form input[type=week],
+.tpl-form-border-form input[type=email],
+.tpl-form-border-form input[type=url],
+.tpl-form-border-form input[type=tel],
+.tpl-form-border-form input[type=color],
+.tpl-form-border-form select,
+.tpl-form-border-form textarea,
+.am-form-field {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857;
+  color: #4d6b8a;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background: 0 0;
+  border: 0;
+  border: 1px solid #c2cad8;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  text-indent: .5em;
+  -o-border-radius: 0;
+  border-radius: 0;
+  color: #555;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+}
+.tpl-form-border-form .am-checkbox,
+.tpl-form-border-form .am-checkbox-inline,
+.tpl-form-border-form .am-form-label,
+.tpl-form-border-form .am-radio,
+.tpl-form-border-form .am-radio-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.tpl-form-border-form .am-form-group:after {
+  clear: both;
+}
+.tpl-form-border-form .am-form-group:after,
+.tpl-form-border-form .am-form-group:before {
+  content: " ";
+  display: table;
+}
+.tpl-form-border-form .am-form-label {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #888;
+  font-weight: inherit;
+  text-align: right;
+}
+.tpl-form-border-form .am-form-group {
+  /*padding: 20px 0;*/
+}
+.tpl-form-border-form .am-form-label .tpl-form-line-small-title {
+  color: #999;
+  font-size: 12px;
+}
+.tpl-form-line-form input[type=number]:focus,
+.tpl-form-line-form input[type=search]:focus,
+.tpl-form-line-form input[type=text]:focus,
+.tpl-form-line-form input[type=password]:focus,
+.tpl-form-line-form input[type=datetime]:focus,
+.tpl-form-line-form input[type=datetime-local]:focus,
+.tpl-form-line-form input[type=date]:focus,
+.tpl-form-line-form input[type=month]:focus,
+.tpl-form-line-form input[type=time]:focus,
+.tpl-form-line-form input[type=week]:focus,
+.tpl-form-line-form input[type=email]:focus,
+.tpl-form-line-form input[type=url]:focus,
+.tpl-form-line-form input[type=tel]:focus,
+.tpl-form-line-form input[type=color]:focus,
+.tpl-form-line-form select:focus,
+.tpl-form-line-form textarea:focus,
+.am-form-field:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.tpl-form-line-form input[type=number],
+.tpl-form-line-form input[type=search],
+.tpl-form-line-form input[type=text],
+.tpl-form-line-form input[type=password],
+.tpl-form-line-form input[type=datetime],
+.tpl-form-line-form input[type=datetime-local],
+.tpl-form-line-form input[type=date],
+.tpl-form-line-form input[type=month],
+.tpl-form-line-form input[type=time],
+.tpl-form-line-form input[type=week],
+.tpl-form-line-form input[type=email],
+.tpl-form-line-form input[type=url],
+.tpl-form-line-form input[type=tel],
+.tpl-form-line-form input[type=color],
+.tpl-form-line-form select,
+.tpl-form-line-form textarea,
+.am-form-field {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857;
+  color: #4d6b8a;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #c2cad8;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background: 0 0;
+  border: 0;
+  border-bottom: 1px solid #c2cad8;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  color: #555;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+}
+.tpl-form-line-form .am-checkbox,
+.tpl-form-line-form .am-checkbox-inline,
+.tpl-form-line-form .am-form-label,
+.tpl-form-line-form .am-radio,
+.tpl-form-line-form .am-radio-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.tpl-form-line-form .am-form-group:after {
+  clear: both;
+}
+.tpl-form-line-form .am-form-group:after,
+.tpl-form-line-form .am-form-group:before {
+  content: " ";
+  display: table;
+}
+.tpl-form-line-form .am-form-label {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #888;
+  font-weight: inherit;
+  text-align: right;
+}
+.tpl-form-line-form .am-form-group {
+  /*padding: 20px 0;*/
+}
+.tpl-form-line-form .am-form-label .tpl-form-line-small-title {
+  color: #999;
+  font-size: 12px;
+}
+.tpl-table-black {
+  color: #838FA1;
+}
+.tpl-table-black thead > tr > th {
+  font-size: 14px;
+  padding: 6px;
+}
+.tpl-table-black tbody > tr > td {
+  font-size: 14px;
+  padding: 7px 6px;
+}
+.tpl-table-black tfoot > tr > th {
+  font-size: 14px;
+  padding: 6px 0;
+}
+.tpl-table-black-operation a {
+  display: inline-block;
+  padding: 5px 6px;
+  font-size: 12px;
+  line-height: 12px;
+  border: 1px solid #36c6d3;
+  color: #36c6d3;
+}
+.tpl-table-black-operation a:hover {
+  background: #36c6d3;
+  color: #fff;
+}
+.tpl-table-black-operation a.tpl-table-black-operation-del {
+  border: 1px solid #e7505a;
+  color: #e7505a;
+}
+.tpl-table-black-operation a.tpl-table-black-operation-del:hover {
+  background: #e7505a;
+  color: #fff;
+}
+.tpl-pagination .am-disabled a,
+.tpl-pagination li a {
+  color: #23abf0;
+  border-radius: 3px;
+  padding: 6px 12px;
+}
+.tpl-pagination .am-active a {
+  background: #23abf0;
+  color: #fff;
+  border: 1px solid #23abf0;
+  padding: 6px 12px;
+}

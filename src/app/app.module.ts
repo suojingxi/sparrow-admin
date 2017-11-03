@@ -6,8 +6,6 @@ import { HttpModule } from '@angular/http';
 import {AppRoutingModule} from './app.routing.module';
 
 import { AppComponent } from './app.component';
-import {BusinessModule} from './business/business.module';
-import {PublicModule} from './public/public.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +15,7 @@ import {PublicModule} from './public/public.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    PublicModule,
-    BusinessModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
