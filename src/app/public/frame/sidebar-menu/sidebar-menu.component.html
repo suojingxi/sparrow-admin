@@ -1,0 +1,22 @@
+<div class="frame-nav-search">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="搜索菜单..."  (input)="inputSearchTxt($event);">
+    <span class="input-group-btn">
+               <button class="btn btn-info frame-not-shadow" type="button"  (click)="searchMenu();">
+                   <i class="fa  fa-search fa-fw"></i>
+                </button>
+            </span>
+  </div>
+</div>
+<div class="frame-nav" frame-custom-scrollbar>
+  <span  class="frame-search-msg" [hidden]="searchMsgHidden">搜索的菜单不存在...</span>
+  <ul  class="frame-sidebar-menu" [hidden]="!searchMsgHidden">
+    <li  *ngFor="let item of data">
+      <a  (click)="itemClicked(item);">
+        <i style="margin-top:3px;width:17px" class="fa  pull-right"  [ngClass]="{'fa-angle-down': !hasLeaf(item) && item.isExpend, 'fa-angle-left': !hasLeaf(item) && !item.isExpend}"></i>
+        <i class="fa " [ngClass]="item.icon"></i> <span>{{item.name}}</span>
+      </a>
+      <app-treeview-menu [data]="item"></app-treeview-menu>
+    </li>
+  </ul>
+</div>

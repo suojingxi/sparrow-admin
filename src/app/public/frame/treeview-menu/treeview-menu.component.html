@@ -1,0 +1,9 @@
+<ul class="frame-treeview-menu" [hidden]="!data.isExpend"  *ngIf="!hasLeaf(data)">
+  <li *ngFor="let item of data.children">
+    <a  (click)="itemClicked(item);">
+      <i class="fa " [ngClass]="item.icon"></i> <span>{{item.name}}</span>
+      <i style="margin-top:3px;width:17px" class="fa  pull-right"  [ngClass]="{'fa-angle-down': !hasLeaf(item) && item.isExpend, 'fa-angle-left': !hasLeaf(item) && !item.isExpend}"></i>
+    </a>
+    <app-treeview-menu [data]="item"></app-treeview-menu>
+  </li>
+</ul>
