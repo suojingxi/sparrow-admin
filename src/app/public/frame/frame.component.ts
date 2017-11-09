@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import {AppService} from "../../app.service";
 import {FrameData} from "./frame.model";
+import {ModalService} from "../share/modal/modal.service";
+import {ConfirmConfig} from "../share/modal/modal.model";
 
 /**
  * 主页面
@@ -356,7 +358,7 @@ export class FrameComponent implements OnInit {
 
   title: string = "首页";
 
-  constructor(private router: Router, private ngbModalService: NgbModal, private appService: AppService) {
+  constructor(private router: Router, private modalService: ModalService, private ngbModalService: NgbModal, private appService: AppService) {
     this.appService.titleEventEmitter.subscribe((value: string) => {
       if(value){
         this.title = value;
@@ -414,5 +416,12 @@ export class FrameComponent implements OnInit {
    * 退出系统
    */
   exitSys() {
+    let exitSysCfg = new ConfirmConfig('您确定退出系统吗？');
+    this.modalService.confirm(exitSysCfg).then((result) => {
+      if (result.status == "approved") {
+        this.router.navigate(['/login']);
+      }
+    }, (reason) => {
+    });
   }
 }

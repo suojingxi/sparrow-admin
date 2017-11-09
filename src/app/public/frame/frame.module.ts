@@ -6,6 +6,7 @@ import {FrameRoutingModule} from "./frame-routing.module";
 import {FrameComponent} from "./frame.component";
 import {SidebarMenuComponent} from "./sidebar-menu/sidebar-menu.component";
 import {TreeviewMenuComponent} from "./treeview-menu/treeview-menu.component";
+import {ModalModule} from "../share/modal/modal.module";
 /**
  * 主体模块
  */
@@ -14,14 +15,15 @@ import {TreeviewMenuComponent} from "./treeview-menu/treeview-menu.component";
     CommonModule,
     FormsModule,
     NgbModule,
-    FrameRoutingModule
+    FrameRoutingModule,
+    ModalModule
   ],
   declarations: [
     FrameComponent,
     SidebarMenuComponent,
     TreeviewMenuComponent
   ],
-  exports:      [],
-  providers:    []
+  exports: [],
+  providers: []
 })
 export class FrameModule{}

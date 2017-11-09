@@ -10,13 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppService } from './app.service';
 import { SpinService } from './public/share/spin/spin.service';
 import { SelectivePreloadingStrategy } from './SelectivePreloadingStrategy';
-import { FrameComponent } from './public/frame/frame.component';
-import { SidebarMenuComponent } from './public/frame/sidebar-menu/sidebar-menu.component';
-import { TreeviewMenuComponent } from './public/frame/treeview-menu/treeview-menu.component';
-import { HomeComponent } from './business/home/home.component';
 import { ToastComponent } from './public/share/toast-box/toast/toast.component';
 import { ToastBoxComponent } from './public/share/toast-box/toast-box.component';
 import {ToastService} from "./public/share/toast-box/toast/toast.service";
+import { AlertComponent } from './public/share/modal/alert/alert.component';
+import { ConfirmComponent } from './public/share/modal/confirm/confirm.component';
 
 @NgModule({
   declarations: [
