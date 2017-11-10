@@ -13,8 +13,6 @@ import { SelectivePreloadingStrategy } from './SelectivePreloadingStrategy';
 import { ToastComponent } from './public/share/toast-box/toast/toast.component';
 import { ToastBoxComponent } from './public/share/toast-box/toast-box.component';
 import {ToastService} from "./public/share/toast-box/toast/toast.service";
-import { AlertComponent } from './public/share/modal/alert/alert.component';
-import { ConfirmComponent } from './public/share/modal/confirm/confirm.component';
 
 @NgModule({
   declarations: [

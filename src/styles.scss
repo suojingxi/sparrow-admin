@@ -4,6 +4,7 @@
 /* ======以下是第三方scss与css引入======*/
 @import "../node_modules/font-awesome/css/font-awesome.css";
 @import "../node_modules/animate.css/animate.min.css";
+@import "../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 
 //bootstrap
 @import "./assets/scss/base/bootstrap-variables.scss";
@@ -18,3 +19,4 @@
 
 //样式重写
 @import "./assets/scss/overwrite/bootstrap.scss";
+@import "./assets/scss/overwrite/mCustomScrollbar.scss";

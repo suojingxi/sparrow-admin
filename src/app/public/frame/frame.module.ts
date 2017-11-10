@@ -7,6 +7,8 @@ import {FrameComponent} from "./frame.component";
 import {SidebarMenuComponent} from "./sidebar-menu/sidebar-menu.component";
 import {TreeviewMenuComponent} from "./treeview-menu/treeview-menu.component";
 import {ModalModule} from "../share/modal/modal.module";
+import {CustomScrollbarModule} from "../share/custom-scrollbar/custom-scrollbar.module";
+import {UserModule} from "../user/user.module";
 /**
  * 主体模块
  */
@@ -16,6 +18,8 @@ import {ModalModule} from "../share/modal/modal.module";
     FormsModule,
     NgbModule,
     FrameRoutingModule,
+    UserModule,
+    CustomScrollbarModule,
     ModalModule
   ],
   declarations: [

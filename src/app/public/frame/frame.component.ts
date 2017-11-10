@@ -5,6 +5,7 @@ import {AppService} from "../../app.service";
 import {FrameData} from "./frame.model";
 import {ModalService} from "../share/modal/modal.service";
 import {ConfirmConfig} from "../share/modal/modal.model";
+import {EditPasswordComponent} from "../user/edit-password/edit-password.component";
 
 /**
  * 主页面
@@ -409,6 +410,11 @@ export class FrameComponent implements OnInit {
    * 修改密码
    */
   passwordEdit() {
+    this.ngbModalService.open(EditPasswordComponent, { size: 'lg' }).result.then((result) => {
+
+    }, (reason) => {
+
+    });
   }
 
 
