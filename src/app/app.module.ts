@@ -13,6 +13,7 @@ import { SelectivePreloadingStrategy } from './SelectivePreloadingStrategy';
 import { ToastComponent } from './public/share/toast-box/toast/toast.component';
 import { ToastBoxComponent } from './public/share/toast-box/toast-box.component';
 import {ToastService} from "./public/share/toast-box/toast/toast.service";
+import {HttpService} from "./common/service/http/http.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {ToastService} from "./public/share/toast-box/toast/toast.service";
     AppService,
     ToastService,
     SpinService,
-    SelectivePreloadingStrategy
+    SelectivePreloadingStrategy,
+    HttpService
   ],
   exports: [
     ToastBoxComponent,

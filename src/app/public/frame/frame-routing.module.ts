@@ -9,7 +9,8 @@ const routes: Routes = [
     path: '',
     component: FrameComponent,
     children: [
-      {path: 'home', loadChildren: 'app/business/home/home.module#HomeModule'}
+      {path: 'home', loadChildren: 'app/business/home/home.module#HomeModule'},
+      {path: 'user', loadChildren: 'app/business/user-manage/user-manage.module#UserManageModule'}
     ]
   }
 ];
