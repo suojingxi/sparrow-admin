@@ -3,7 +3,7 @@
  */
 export const BusinessConfig: any = {
   // 登录请求接口
-  'login': '',
+  'login': 'login',
   // 系统退出接口
   'logout': '',
   // 修改密码接口
