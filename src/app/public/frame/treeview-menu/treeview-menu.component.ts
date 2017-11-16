@@ -1,6 +1,6 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {MenuData} from "../frame.model";
-import {Router} from "@angular/router";
+import { Component, Input } from '@angular/core';
+import { MenuData } from '../frame.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-treeview-menu',

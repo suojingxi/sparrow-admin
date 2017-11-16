@@ -10,11 +10,11 @@ export enum ToastType {
  * toast配置
  */
 export class ToastConfig {
-  toastType: ToastType; //toast类型
-  text: string; //toast显示内容
-  textStrong: string; //字体样式
-  autoDismissTime: number; //自动消失时间：如果大于0，则自动消失
-  dismissable: boolean; //是否自动消失
+  toastType: ToastType; // toast类型
+  text: string; // toast显示内容
+  textStrong: string; // 字体样式
+  autoDismissTime: number; // 自动消失时间：如果大于0，则自动消失
+  dismissable: boolean; // 是否自动消失
 
 
   constructor(toastType: ToastType, textStrong: string = '', text: string = '', autoDismissTime = 0, dismissable = true) {

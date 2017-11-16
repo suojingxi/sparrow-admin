@@ -9,9 +9,9 @@ export class SessionStorageService {
   public sessionStorage: any;
 
   constructor() {
-    if(!sessionStorage){
+    if (!sessionStorage) {
       throw new Error('浏览器不支持会话存储！');
-    }else{
+    } else {
       this.sessionStorage = window.sessionStorage;
     }
   }

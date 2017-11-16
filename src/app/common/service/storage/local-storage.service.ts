@@ -9,9 +9,9 @@ export class LocalStorageService {
   public localStorage: any;
 
   constructor() {
-    if(!localStorage) {
+    if (!localStorage) {
       throw new Error('浏览器不支持本地存储！');
-    } else{
+    } else {
       this.localStorage = window.localStorage;
     }
   }

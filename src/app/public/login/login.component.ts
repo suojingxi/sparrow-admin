@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {ToastService} from "../share/toast-box/toast/toast.service";
-import {ToastConfig, ToastType} from "../share/toast-box/toast/toast.model";
-import {ServeConfig} from "../../common/config/serve.config";
-import {BusinessConfig} from "../../common/config/business.config";
-import {HttpService} from "../../common/service/http/http.service";
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastService } from '../share/toast-box/toast/toast.service';
+import { ToastConfig, ToastType } from '../share/toast-box/toast/toast.model';
+import { ServeConfig } from '../../common/config/serve.config';
+import { BusinessConfig } from '../../common/config/business.config';
+import { HttpService } from '../../common/service/http/http.service';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +16,12 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private router: Router, private toastService: ToastService, private httpService: HttpService, private formBuilder: FormBuilder) {
-    let userName = new FormControl('sysadmin', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
-    let password = new FormControl('sysadmin', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
+  constructor(private router: Router, private toastService: ToastService, private httpService: HttpService,
+              private formBuilder: FormBuilder) {
+    const userName = new FormControl('sysadmin', Validators.compose(
+      [Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
+    const password = new FormControl('sysadmin', Validators.compose(
+      [Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
     this.loginForm = this.formBuilder.group({
       userName: userName,
       password: password
@@ -31,9 +34,9 @@ export class LoginComponent implements OnInit {
   /**
    * 登录
    */
-  login(){
-    if(this.loginForm.valid){
-      let that = this;
+  login() {
+    if (this.loginForm.valid) {
+      const that = this;
       this.httpService.post(ServeConfig.domain + BusinessConfig.login, {
        userName: 'admin',
        password: '123456'

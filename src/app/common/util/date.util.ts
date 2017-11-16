@@ -2,12 +2,12 @@
  * 工具类：时间
  */
 export class DateUtil {
-  constructor(){}
+  constructor() {}
 
   /**
    * 日期对象转为日期字符串
    * @param date 需要格式化的日期对象
-   * @param sFormat 输出格式,默认为yyyy-MM-dd                         年：y，月：M，日：d，时：h，分：m，秒：s
+   * @param format 输出格式,默认为yyyy-MM-dd                         年：y，月：M，日：d，时：h，分：m，秒：s
    * @example  dateFormat(new Date())                                "2017-11-10"
    * @example  dateFormat(new Date(),'yyyy-MM-dd')                   "2017-11-10"
    * @example  dateFormat(new Date(),'yyyy-MM-dd hh:mm:ss')         "2017-11-10 16:14:00"
@@ -16,7 +16,7 @@ export class DateUtil {
    * @returns {string}
    */
   static dateFormat(date: Date, format: String = 'yyyy-MM-dd'): string {
-    let time = {
+    const time = {
       Year: 0,
       TYear: '0',
       Month: 0,
@@ -36,17 +36,17 @@ export class DateUtil {
     time.Year = date.getFullYear();
     time.TYear = String(time.Year).substr(2);
     time.Month = date.getMonth() + 1;
-    time.TMonth = time.Month < 10 ? "0" + time.Month : String(time.Month);
+    time.TMonth = time.Month < 10 ? '0' + time.Month : String(time.Month);
     time.Day = date.getDate();
-    time.TDay = time.Day < 10 ? "0" + time.Day : String(time.Day);
+    time.TDay = time.Day < 10 ? '0' + time.Day : String(time.Day);
     time.Hour = date.getHours();
-    time.THour = time.Hour < 10 ? "0" + time.Hour : String(time.Hour);
+    time.THour = time.Hour < 10 ? '0' + time.Hour : String(time.Hour);
     time.hour = time.Hour < 13 ? time.Hour : time.Hour - 12;
-    time.Thour = time.hour < 10 ? "0" + time.hour : String(time.hour);
+    time.Thour = time.hour < 10 ? '0' + time.hour : String(time.hour);
     time.Minute = date.getMinutes();
-    time.TMinute = time.Minute < 10 ? "0" + time.Minute : String(time.Minute);
+    time.TMinute = time.Minute < 10 ? '0' + time.Minute : String(time.Minute);
     time.Second = date.getSeconds();
-    time.TSecond = time.Second < 10 ? "0" + time.Second : String(time.Second);
+    time.TSecond = time.Second < 10 ? '0' + time.Second : String(time.Second);
     time.Millisecond = date.getMilliseconds();
     return format.replace(/yyyy/ig, String(time.Year))
       .replace(/yyy/ig, String(time.Year))

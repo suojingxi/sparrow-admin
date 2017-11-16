@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Http, RequestOptionsArgs, RequestOptions, RequestMethod, URLSearchParams, Headers} from "@angular/http";
-import {SpinService} from "../../../public/share/spin/spin.service";
-import {DateUtil} from "../../util/date.util";
+import {Http, RequestOptionsArgs, RequestOptions, RequestMethod, URLSearchParams, Headers} from '@angular/http';
+import {SpinService} from '../../../public/share/spin/spin.service';
+import {DateUtil} from '../../util/date.util';
 
 /**
  * HTTP服务
@@ -19,19 +19,21 @@ export class HttpService {
     }, err => {
       this.spinService.spin(false);
       // 处理请求失败
-      let msg = this.requestFailed(url, options, err);
+      const msg = this.requestFailed(url, options, err);
       error(err.ok, msg, err);
     });
   }
 
-  public get(url: string, paramMap: any = null, success: Function = function (successful, data, res) {}, error: Function = function(successful, msg, err){}): any {
+  public get(url: string, paramMap: any = null, success: Function = function (successful, data, res) {},
+             error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Get,
       search: HttpService.buildURLSearchParams(paramMap)
     }), success, error);
   }
 
-  public post(url: string, body: any = null, success: Function = function (successful, data, res) {}, error: Function = function(successful, msg, err){}): any {
+  public post(url: string, body: any = null, success: Function = function (successful, data, res) {},
+              error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Post,
       body: body,
@@ -41,7 +43,8 @@ export class HttpService {
     }), success, error);
   }
 
-  public postFormData(url: string, paramMap: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public postFormData(url: string, paramMap: any = null, success: Function = function(successful, data, res){},
+                      error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Post,
       search: HttpService.buildURLSearchParams(paramMap).toString(),
@@ -51,35 +54,40 @@ export class HttpService {
     }), success, error);
   }
 
-  public put(url: string, body: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public put(url: string, body: any = null, success: Function = function(successful, data, res){},
+             error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Put,
       body: body
     }), success, error);
   }
 
-  public delete(url: string, paramMap: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public delete(url: string, paramMap: any = null, success: Function = function(successful, data, res){},
+                error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Delete,
       search: HttpService.buildURLSearchParams(paramMap).toString()
     }), success, error);
   }
 
-  public patch(url: string, body: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public patch(url: string, body: any = null, success: Function = function(successful, data, res){},
+               error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Patch,
       body: body
     }), success, error);
   }
 
-  public head(url: string, paramMap: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public head(url: string, paramMap: any = null, success: Function = function(successful, data, res){},
+              error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Head,
       search: HttpService.buildURLSearchParams(paramMap).toString()
     }), success, error);
   }
 
-  public options(url: string, paramMap: any = null, success: Function = function(successful, data, res){}, error: Function = function(successful, msg, err){}): any {
+  public options(url: string, paramMap: any = null, success: Function = function(successful, data, res){},
+                 error: Function = function(successful, msg, err){}): any {
     return this.request(url, new RequestOptions({
       method: RequestMethod.Options,
       search: HttpService.buildURLSearchParams(paramMap).toString()
@@ -92,13 +100,13 @@ export class HttpService {
    * @returns {URLSearchParams}
    */
   private static buildURLSearchParams(paramMap): URLSearchParams {
-    let params = new URLSearchParams();
-    if(!paramMap){
+    const params = new URLSearchParams();
+    if (!paramMap) {
       return params;
     }
-    for(let key in paramMap){
+    for (const key in paramMap) {
       let val = paramMap[key];
-      if(val instanceof Date){
+      if (val instanceof Date) {
         val = DateUtil.dateFormat(val, 'yyyy-MM-dd hh:mm:ss');
       }
       params.set(key, val);
@@ -113,7 +121,8 @@ export class HttpService {
    * @param err
    */
   private requestFailed(url: string, options: RequestOptionsArgs, err) {
-    let msg = '请求发生异常', status = err.status;
+    let msg = '请求发生异常';
+    const status = err.status;
     if (status === 0) {
       msg = '请求失败，请求响应出错';
     } else if (status === 404) {
@@ -121,7 +130,7 @@ export class HttpService {
     } else if (status === 500) {
       msg = '请求失败，服务器出错，请稍后再试';
     } else {
-      msg = "未知错误，请检查网络";
+      msg = '未知错误，请检查网络';
     }
     return msg;
   }

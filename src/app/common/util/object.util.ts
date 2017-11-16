@@ -1,4 +1,4 @@
-import {ArrayUtil} from "./array.util";
+import { ArrayUtil } from './array.util';
 /**
  * 工具类：对象
  */

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {SpinService} from "./spin.service";
+import { Component } from '@angular/core';
+import { SpinService } from './spin.service';
 
 /*
  旋转组件：页面加载时用到
@@ -11,16 +11,16 @@ import {SpinService} from "./spin.service";
 })
 export class SpinComponent {
   // 显示标识：是否显示该组件
-  showSpin: boolean = false;
+  showSpin = false;
 
   // 数量：用于控制组件显示，防止重复加载
-  count: number = 0;
+  count = 0;
 
-  constructor(private spinService: SpinService){
+  constructor(private spinService: SpinService) {
     this.spinService.getSpin().forEach((showSpin: boolean) => {
-      if(showSpin){
+      if (showSpin) {
         this.openSpin();
-      }else{
+      }else {
         this.closeSpin();
       }
     });
@@ -29,8 +29,8 @@ export class SpinComponent {
   /**
    * 打开旋转显示
    */
-  private openSpin(){
-    if(!this.showSpin){
+  private openSpin() {
+    if (!this.showSpin) {
       this.showSpin = true;
     }
     this.count++;
@@ -39,9 +39,9 @@ export class SpinComponent {
   /**
    * 关闭旋转显示
    */
-  private closeSpin(){
+  private closeSpin() {
     this.count--;
-    if(this.count <= 0){
+    if (this.count <= 0) {
       this.showSpin = false;
       this.count = 0;
     }

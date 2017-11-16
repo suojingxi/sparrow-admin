@@ -2,9 +2,9 @@
  * 主页面数据模型
  */
 export class FrameData {
-  //用户数据
+  // 用户数据
   userData: UserData;
-  //菜单数据
+  // 菜单数据
   menuData: Array<MenuData>;
 }
 
@@ -12,49 +12,49 @@ export class FrameData {
  * 用户数据
  */
 export class UserData {
-  //用户名
+  // 用户名
   userName: string;
 
-  //头像
+  // 头像
   userAvatar: string;
 
-  //手机
+  // 手机
   mobile: string;
 
-  //邮箱
+  // 邮箱
   email: string;
 
-  //岗位
+  // 岗位
   positions: string;
 }
 
 /**
  * 菜单数据
  */
-export class MenuData{
+export class MenuData {
 
-  //ID
+  // ID
   id: string;
 
-  //父ID
+  // 父ID
   parentId: string;
 
-  //名称
+  // 名称
   name: string;
 
-  //关键字
+  // 关键字
   keyWord: string;
 
-  //图标
+  // 图标
   icon: string;
 
-  //是否展开
+  // 是否展开
   isExpend?: boolean;
 
-  //URL
+  // URL
   url?: string;
 
-  //子节点
+  // 子节点
   children?: Array<MenuData>;
 
 }

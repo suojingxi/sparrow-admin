@@ -1,5 +1,5 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {MenuData} from "../frame.model";
+import { Component, OnInit, Input } from '@angular/core';
+import { MenuData } from '../frame.model';
 
 @Component({
   selector: 'app-sidebar-menu',
@@ -8,17 +8,17 @@ import {MenuData} from "../frame.model";
 })
 export class SidebarMenuComponent implements OnInit {
 
-  //输入数据
+  // 输入数据
   @Input() data: Array<MenuData>;
 
-  //所有数据
+  // 所有数据
   private allData: Array<MenuData>;
 
-  //搜索文本
-  searchText: string = '';
+  // 搜索文本
+  searchText = '';
 
-  //搜索隐藏
-  searchMsgHidden: boolean = true;
+  // 搜索隐藏
+  searchMsgHidden = true;
 
   constructor() { }
 
@@ -34,19 +34,19 @@ export class SidebarMenuComponent implements OnInit {
    * @param item
    * @returns {boolean}
    */
-  hasLeaf(item: MenuData): boolean{
-    return !item.children || !item.children.length
+  hasLeaf(item: MenuData): boolean {
+    return !item.children || !item.children.length;
   }
 
   /**
    * 点击
    * @param item
    */
-  itemClicked(item:MenuData){
-    if(!this.hasLeaf(item)) {
-      for(let obj of this.data){
-        if(obj.id!=item.id){
-          obj.isExpend=false;
+  itemClicked(item: MenuData) {
+    if (!this.hasLeaf(item)) {
+      for (const obj of this.data) {
+        if (obj.id !== item.id) {
+          obj.isExpend = false;
         }
       }
       item.isExpend = !item.isExpend;
@@ -56,27 +56,27 @@ export class SidebarMenuComponent implements OnInit {
   /**
    * 查询菜单
    */
-  searchMenu(){
-    let tempData=this.allData;
-    this.searchText=this.searchText.trim();
-    this.searchMsgHidden=true;
+  searchMenu() {
+    const tempData = this.allData;
+    this.searchText = this.searchText.trim();
+    this.searchMsgHidden = true;
 
-    if(''!=this.searchText){
-      let keyWord = new RegExp(this.searchText);
-      let menuList=new Array<MenuData>();
-      let menuIdList=new Array<string>();
+    if ('' !== this.searchText) {
+      const keyWord = new RegExp(this.searchText);
+      const menuList = new Array<MenuData>();
+      const menuIdList = new Array<string>();
 
-      for(let item of tempData){
-        this.searchItem(item,menuList,menuIdList,keyWord);
+      for (const item of tempData) {
+        this.searchItem(item, menuList, menuIdList, keyWord);
       }
-      if(menuList.length>0){
-        this.data=menuList;
-      }else{
-        this.searchMsgHidden=false;
+      if (menuList.length > 0) {
+        this.data = menuList;
+      } else {
+        this.searchMsgHidden = false;
       }
 
-    }else{
-      this.data=this.allData;
+    } else {
+      this.data = this.allData;
     }
   }
 
@@ -85,19 +85,20 @@ export class SidebarMenuComponent implements OnInit {
    * @param item
    * @param menuList
    */
-  searchItem(item:MenuData,menuList:Array<MenuData>,menuIdList:Array<string>,keyWord:RegExp){
-    item.isExpend=false;
-    //关键字匹配，并且不在列表中的
-    if((item.name.match(keyWord) || item.keyWord.match(keyWord)) && !this.checkSearchMenuIdExists(item.id,menuIdList)){
+  searchItem(item: MenuData, menuList: Array<MenuData>, menuIdList: Array<string>, keyWord: RegExp) {
+    item.isExpend = false;
+    // 关键字匹配，并且不在列表中的
+    if ((item.name.match(keyWord) || item.keyWord.match(keyWord)) &&
+      !this.checkSearchMenuIdExists(item.id, menuIdList)) {
       menuList.push(item);
-      this.pushSearchMenu(item,menuIdList);
+      this.pushSearchMenu(item, menuIdList);
     }
 
-    //存在子菜单的，递归子菜单
-    let itemChildren=item.children;
-    if(itemChildren && itemChildren.length>0){
-      for(let subItem of itemChildren){
-        this.searchItem(subItem,menuList,menuIdList,keyWord);
+    // 存在子菜单的，递归子菜单
+    const itemChildren = item.children;
+    if (itemChildren && itemChildren.length > 0) {
+      for (const subItem of itemChildren) {
+        this.searchItem(subItem, menuList, menuIdList, keyWord);
       }
     }
 
@@ -108,12 +109,12 @@ export class SidebarMenuComponent implements OnInit {
    * @param item
    * @param menuIdList
    */
-  pushSearchMenu(item:MenuData,menuIdList:Array<string>){
+  pushSearchMenu(item: MenuData, menuIdList: Array<string>) {
     menuIdList.push(item.id);
-    let itemChildren=item.children;
-    if(itemChildren && itemChildren.length>0){
-      for(let subItem of itemChildren){
-        this.pushSearchMenu(subItem,menuIdList);
+    const itemChildren = item.children;
+    if (itemChildren && itemChildren.length > 0) {
+      for (const subItem of itemChildren) {
+        this.pushSearchMenu(subItem, menuIdList);
       }
     }
   }
@@ -123,13 +124,12 @@ export class SidebarMenuComponent implements OnInit {
    * @param id 检查菜单id是否存在
    * @param menuIdList
    */
-  checkSearchMenuIdExists(id,menuIdList:Array<string>){
-    for(let menuId of menuIdList){
-      if(menuId==id){
+  checkSearchMenuIdExists(id, menuIdList: Array<string>) {
+    for (const menuId of menuIdList) {
+      if (menuId === id) {
         return true;
       }
     }
-
     return false;
   }
 
@@ -137,7 +137,7 @@ export class SidebarMenuComponent implements OnInit {
    * 查询输入
    * @param event
    */
-  inputSearchTxt(event){
-    this.searchText=event.target.value;
+  inputSearchTxt(event) {
+    this.searchText = event.target.value;
   }
 }

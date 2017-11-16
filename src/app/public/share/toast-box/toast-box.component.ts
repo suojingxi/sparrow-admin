@@ -1,7 +1,7 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {trigger, state, style, transition, animate} from "@angular/animations";
-import {ToastConfig} from "./toast/toast.model";
-import {ToastService} from "./toast/toast.service";
+import { Component, OnInit, Input } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ToastConfig } from './toast/toast.model';
+import { ToastService } from './toast/toast.service';
 
 @Component({
   selector: 'app-toast-box',
@@ -11,7 +11,7 @@ import {ToastService} from "./toast/toast.service";
     trigger('animation', [
       state('none', style({})),
       state('decent', style([{opacity: 1}, {maxHeight: 300}])),
-      state('fancy', style([{transform: 'translateX(0)'},{transform: 'translateY(0)'}, {opacity: 1}, {maxHeight: 300}])),
+      state('fancy', style([{transform: 'translateX(0)'}, {transform: 'translateY(0)'}, {opacity: 1}, {maxHeight: 300}])),
       transition('void => fancy', [
         style({opacity: 0, maxHeight: 0, transform: 'translateY(-100%)'}),
         animate('300ms ease-in-out')
@@ -31,8 +31,8 @@ import {ToastService} from "./toast/toast.service";
 })
 export class ToastBoxComponent implements OnInit {
 
-  @Input() toastAnimation: string = 'none';
-  @Input() toastPosition: string = 'toast-top-center';
+  @Input() toastAnimation = 'none';
+  @Input() toastPosition = 'toast-top-center';
 
   private toastConfigs: Array<ToastConfig> = [];
 
@@ -57,7 +57,7 @@ export class ToastBoxComponent implements OnInit {
    * @param toastCfg
    */
   remove(toastCfg: ToastConfig) {
-    if(this.toastConfigs.indexOf(toastCfg) >= 0) {
+    if (this.toastConfigs.indexOf(toastCfg) >= 0) {
       this.toastConfigs.splice(this.toastConfigs.indexOf(toastCfg), 1);
     }
   }

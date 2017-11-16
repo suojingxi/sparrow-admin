@@ -1,5 +1,5 @@
-import {Component, OnChanges, SimpleChanges, Input, Output, EventEmitter} from '@angular/core';
-import {PaginationOptions, PaginationType} from "./pagination.model";
+import { Component, OnChanges, SimpleChanges, Input, Output, EventEmitter } from '@angular/core';
+import { PaginationOptions, PaginationType } from './pagination.model';
 
 /**
  * 分页组件
@@ -11,11 +11,11 @@ import {PaginationOptions, PaginationType} from "./pagination.model";
 })
 export class PaginationComponent implements OnChanges {
 
-  @Input() total: number = 0;
+  @Input() total = 0;
 
   @Input() pageList: Array<number> = [10, 20, 30, 50, 100, 150, 200];
 
-  @Input() btnCls: string = 'btn-light';
+  @Input() btnCls = 'btn-light';
 
   @Output() onPageChanged = new EventEmitter();
 
@@ -32,23 +32,23 @@ export class PaginationComponent implements OnChanges {
     this.options.pageList = this.pageList;
     this.options.pageSize = this.options.pageList[0];
     this.refreshPage();
-    this.pageOperation(PaginationType.PAGE_INIT)
+    this.pageOperation(PaginationType.PAGE_INIT);
   }
 
   /**
    * 分页刷新
    */
-  refreshPage(){
+  refreshPage() {
     this.options.pageTotal = 0;
-    if(Number.parseInt(this.options.total) % Number.parseInt(this.options.pageSize) == 0){
+    if (Number.parseInt(this.options.total) % Number.parseInt(this.options.pageSize) === 0) {
       this.options.pageTotal = Number.parseInt(this.options.total) / Number.parseInt(this.options.pageSize);
-    }else{
+    }else {
       this.options.pageTotal = Number.parseInt(this.options.total) / Number.parseInt(this.options.pageSize) + 1;
     }
     this.options.pageTotal = Number.parseInt(this.options.pageTotal);
-    if(this.options.pageTotal <= 0){
+    if (this.options.pageTotal <= 0) {
       this.options.pageNumber = 0;
-    }else{
+    }else {
       this.options.pageNumber = 1;
     }
   }
@@ -56,7 +56,7 @@ export class PaginationComponent implements OnChanges {
   /**
    * 第一页
    */
-  firstPage(){
+  firstPage() {
     this.options.pageNumber = 1;
   }
 
@@ -91,8 +91,8 @@ export class PaginationComponent implements OnChanges {
    * 分页操作
    * @param type 分页操作类型
    */
-  pageOperation(type){
-    let pageParam = {
+  pageOperation(type) {
+    const pageParam = {
       pageNumber: this.options.pageNumber,
       pageSize: this.options.pageSize,
       pageTotal: this.options.pageTotal,
@@ -106,8 +106,8 @@ export class PaginationComponent implements OnChanges {
    * 分页改变
    * @param type 分页操作类型
    */
-  pageChanged(type){
-    switch (type){
+  pageChanged(type) {
+    switch (type) {
       case PaginationType.NEXT_PAGE:
         this.nextPage();
         break;
@@ -128,7 +128,7 @@ export class PaginationComponent implements OnChanges {
    * 页数改变
    * @param $event  当前条件
    */
-  pageSizeChanged($event){
+  pageSizeChanged($event) {
     this.options.pageSize = Number.parseInt($event);
     this.refreshPage();
     this.pageOperation(PaginationType.PAGE_SIZE_CHANGE);

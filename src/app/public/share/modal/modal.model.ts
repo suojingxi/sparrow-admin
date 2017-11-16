@@ -8,7 +8,8 @@ export class ConfirmConfig {
   approveBtnCls: string;
   approveBtnText: string;
 
-  constructor(content: string='', declineBtnCls: string='btn-light', declineBtnText: string='取消', approveBtnCls: string='btn-primary', approveBtnText: string='确定'){
+  constructor(content: string = '', declineBtnCls: string= 'btn-light', declineBtnText: string = '取消',
+              approveBtnCls: string = 'btn-primary', approveBtnText: string = '确定') {
     this.content = content;
     this.declineBtnCls = declineBtnCls;
     this.declineBtnText = declineBtnText;
@@ -20,19 +21,19 @@ export class ConfirmConfig {
     return this.content;
   }
 
-  getdeclineBtnCls():string{
+  getdeclineBtnCls(): string {
     return this.declineBtnCls;
   }
 
-  getDeclineBtnText():string{
+  getDeclineBtnText(): string {
     return this.declineBtnText;
   }
 
-  getApproveBtnCls():string{
+  getApproveBtnCls(): string {
     return this.approveBtnCls;
   }
 
-  getApproveBtnText():string{
+  getApproveBtnText(): string {
     return this.approveBtnText;
   }
 }
@@ -47,14 +48,15 @@ export enum AlertType {
 /**
  * 警告框配置
  */
-export class AlertConfig{
+export class AlertConfig {
   title: string;
   content: string;
   type: AlertType;
   approveBtnCls: string;
   approveBtnText: string;
 
-  constructor(type: AlertType=AlertType.WARNING, title: string='', content: string='', approveBtnCls: string='btn-primary', approveBtnText: string='确定'){
+  constructor(type: AlertType = AlertType.WARNING, title: string = '', content: string = '',
+              approveBtnCls: string = 'btn-primary', approveBtnText: string = '确定') {
     this.title = title;
     this.content = content;
     this.type = type;
@@ -74,11 +76,11 @@ export class AlertConfig{
     return this.type;
   }
 
-  getApproveBtnCls():string{
+  getApproveBtnCls(): string {
     return this.approveBtnCls;
   }
 
-  getApproveBtnText():string{
+  getApproveBtnText(): string {
     return this.approveBtnText;
   }
 }

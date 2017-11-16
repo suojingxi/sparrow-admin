@@ -1,7 +1,7 @@
-import {Routes, RouterModule} from "@angular/router";
-import {UserManageComponent} from "./user-manage.component";
-import {UserListComponent} from "./user-list/user-list.component";
-import {NgModule} from "@angular/core";
+import { Routes, RouterModule } from '@angular/router';
+import { UserManageComponent } from './user-manage.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',

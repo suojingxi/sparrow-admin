@@ -1,5 +1,5 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {ToastConfig, ToastType} from "./toast.model";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ToastConfig, ToastType } from './toast.model';
 
 /**
  * toast组件
@@ -18,8 +18,8 @@ export class ToastComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //自动关闭
-    if(this.config.isAutoDismissing()){
+    // 自动关闭
+    if (this.config.isAutoDismissing()) {
       setTimeout(() => this.dismiss(), this.config.getAutoDismissTime());
     }
   }

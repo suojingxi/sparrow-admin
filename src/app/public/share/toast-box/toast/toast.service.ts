@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Subject, Observable} from "rxjs";
-import {ToastConfig} from "./toast.model";
+import {Subject, Observable} from 'rxjs/';
+import {ToastConfig} from './toast.model';
 
 /**
  * toast服务

@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
-import {ConfirmConfig} from "../modal.model";
-import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { ConfirmConfig } from '../modal.model';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 /**
  * 确认框组件
@@ -11,7 +11,7 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['confirm.component.scss']
 })
-export class ConfirmComponent{
+export class ConfirmComponent {
 
   @Input() config: ConfirmConfig;
 

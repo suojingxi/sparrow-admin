@@ -1,6 +1,6 @@
-import {NgModule} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {CustomScrollbarDirective} from "./custom-scrollbar.directive";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CustomScrollbarDirective } from './custom-scrollbar.directive';
 
 /**
  * 自定义滚动条模块
@@ -12,7 +12,7 @@ import {CustomScrollbarDirective} from "./custom-scrollbar.directive";
   declarations: [
     CustomScrollbarDirective
   ],
-  exports:[
+  exports: [
     CustomScrollbarDirective
   ]
 })

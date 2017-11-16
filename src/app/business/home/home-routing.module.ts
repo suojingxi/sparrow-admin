@@ -1,6 +1,6 @@
-import {Routes, RouterModule} from "@angular/router";
-import {HomeComponent} from "./home.component";
-import {NgModule} from "@angular/core";
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home.component';
+import { NgModule } from '@angular/core';
 /**
  * 主页路由
  * @type {Array}
@@ -19,4 +19,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class HomeRoutingModule{}
+export class HomeRoutingModule {}

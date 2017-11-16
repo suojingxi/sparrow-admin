@@ -1,6 +1,6 @@
-import {Routes, RouterModule} from "@angular/router";
-import {FrameComponent} from "./frame.component";
-import {NgModule} from "@angular/core";
+import { Routes, RouterModule } from '@angular/router';
+import { FrameComponent } from './frame.component';
+import { NgModule } from '@angular/core';
 /**
  * 主体路由
  */
@@ -22,4 +22,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class FrameRoutingModule{}
+export class FrameRoutingModule {}

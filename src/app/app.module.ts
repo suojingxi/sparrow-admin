@@ -12,8 +12,8 @@ import { SpinService } from './public/share/spin/spin.service';
 import { SelectivePreloadingStrategy } from './SelectivePreloadingStrategy';
 import { ToastComponent } from './public/share/toast-box/toast/toast.component';
 import { ToastBoxComponent } from './public/share/toast-box/toast-box.component';
-import {ToastService} from "./public/share/toast-box/toast/toast.service";
-import {HttpService} from "./common/service/http/http.service";
+import { ToastService } from './public/share/toast-box/toast/toast.service';
+import { HttpService } from './common/service/http/http.service';
 
 @NgModule({
   declarations: [

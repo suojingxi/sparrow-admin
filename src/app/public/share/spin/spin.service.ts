@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Subject, Observable} from "rxjs";
+import { Subject, Observable } from 'rxjs/';
 
 /**
  * 旋转组件服务
@@ -9,13 +9,13 @@ export class SpinService {
 
   private spinSubject = new Subject<boolean>();
 
-  constructor(){}
+  constructor() {}
 
-  getSpin(): Observable<boolean>{
+  getSpin(): Observable<boolean> {
     return this.spinSubject;
   }
 
-  spin(showSpin: boolean){
+  spin(showSpin: boolean) {
     this.spinSubject.next(showSpin);
   }
 }

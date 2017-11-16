@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
-import {AlertConfig, AlertType} from "../modal.model";
-import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { AlertConfig, AlertType } from '../modal.model';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 /**
  * 警告框组件

@@ -1,19 +1,19 @@
-import {Directive, AfterViewInit, OnDestroy, Input, Output, EventEmitter, ElementRef} from '@angular/core';
+import { Directive, AfterViewInit, OnDestroy, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 declare var $: any;
 
 /**
  * 自定义滚动条
  */
 @Directive({
-  selector: '[app-custom-scrollbar]'
+  selector: '[appCustomScrollbar]'
 })
-export class CustomScrollbarDirective implements AfterViewInit, OnDestroy{
+export class CustomScrollbarDirective implements AfterViewInit, OnDestroy {
 
   @Input() options: any = {
     axis: 'y',
     theme: 'minimal-dark',
-    autoDraggerLength:true,
-    scrollInertia:500
+    autoDraggerLength: true,
+    scrollInertia: 500
   };
 
   @Output() onViewInit = new EventEmitter();
@@ -33,7 +33,7 @@ export class CustomScrollbarDirective implements AfterViewInit, OnDestroy{
    * 销毁
    */
   ngOnDestroy(): void {
-    this.scrollbarInstance.mCustomScrollbar("destroy");
+    this.scrollbarInstance.mCustomScrollbar('destroy');
   }
 
   /**
@@ -47,7 +47,7 @@ export class CustomScrollbarDirective implements AfterViewInit, OnDestroy{
   /**
    * 获得实例
    */
-  getScrollbarInstance(){
+  getScrollbarInstance() {
     return this.scrollbarInstance;
   }
 }

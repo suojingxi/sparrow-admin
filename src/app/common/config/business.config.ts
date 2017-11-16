@@ -8,4 +8,4 @@ export const BusinessConfig: any = {
   'logout': '',
   // 修改密码接口
   'editPassword': '',
-}
+};

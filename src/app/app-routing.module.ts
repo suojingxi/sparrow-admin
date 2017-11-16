@@ -1,6 +1,6 @@
-import {Routes, RouterModule} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {SelectivePreloadingStrategy} from "./SelectivePreloadingStrategy";
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { SelectivePreloadingStrategy } from './SelectivePreloadingStrategy';
 /**
  * app路由
  */
@@ -38,4 +38,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule{}
+export class AppRoutingModule {}
